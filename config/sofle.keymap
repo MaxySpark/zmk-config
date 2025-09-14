@@ -27,6 +27,26 @@
         };
     };
 
+    behaviors {
+        HoldTap: HoldTap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLDTAP";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
+        ToggleTap: ToggleTap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TOGGLETAP";
+            bindings = <&tog>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -41,11 +61,11 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp ESCAPE  &kp N1  &kp N2            &kp N3    &kp N4            &kp N5                              &kp N6     &kp N7     &kp N8     &kp N9    &kp N0    &kp DELETE
-&kp GRAVE   &kp Q   &kp W             &kp E     &kp R             &kp T                               &kp Y      &kp U      &kp I      &kp O     &kp P     &kp BSPC
-&kp TAB     &kp A   &kp S             &kp D     &kp F             &kp G                               &kp H      &kp J      &kp K      &kp L     &kp SEMI  &kp SQT
-&kp LSHFT   &kp Z   &kp X             &kp C     &kp V             &kp B      &kp C_MUTE    &none      &kp N      &kp M      &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-                    &kp LEFT_CONTROL  &kp LALT  &kp LEFT_COMMAND  &mo LOWER  &kp RET       &kp SPACE  &mo RAISE  &kp RCTRL  &kp RALT   &kp RGUI
+&kp GRAVE  &kp N1               &kp N2                 &kp N3            &kp N4            &kp N5                                                                 &kp N6                  &kp N7     &kp N8                      &kp N9    &kp N0    &kp MINUS
+&kp TAB    &kp Q                &kp W                  &kp E             &kp R             &kp T                                                                  &kp Y                   &kp U      &kp I                       &kp O     &kp P     &kp BACKSLASH
+&kp ESC    &HoldTap LEFT_ALT A  &HoldTap LEFT_SHIFT S  &kp D             &kp F             &kp G                                                                  &kp H                   &kp J      &kp K                       &kp L     &kp SEMI  &HoldTap RIGHT_SHIFT SQT
+&kp LSHFT  &HoldTap LCTRL Z     &kp X                  &kp C             &kp V             &kp B                    &kp C_MUTE            &none                   &kp N                   &kp M      &kp COMMA                   &kp DOT   &kp FSLH  &kp ENTER
+                                &ToggleTap 1 CAPS      &kp LEFT_CONTROL  &kp LEFT_COMMAND  &HoldTap LEFT_ALT ENTER  &HoldTap LCTRL TAB    &ToggleTap 1 BACKSPACE  &ToggleTap RAISE SPACE  &kp RCTRL  &HoldTap RIGHT_ALT RA(TAB)  &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -63,11 +83,11 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&studio_unlock  &kp F1     &kp F2          &kp F3       &kp F4    &kp F5                       &kp F6     &kp F7    &kp F8           &kp F9     &kp F10   &kp F11
-&kp GRAVE       &kp N1     &kp N2          &kp N3       &kp N4    &kp N5                       &kp N6     &kp N7    &kp N8           &kp N9     &kp N0    &kp F12
-&trans          &kp EXCL   &kp AT          &kp HASH     &kp DLLR  &kp PRCNT                    &kp CARET  &kp AMPS  &kp KP_MULTIPLY  &kp LPAR   &kp RPAR  &kp PIPE
-&trans          &kp EQUAL  &kp MINUS       &kp KP_PLUS  &kp LBRC  &kp RBRC   &trans    &trans  &kp LBKT   &kp RBKT  &kp SEMI         &kp COLON  &kp BSLH  &trans
-                           &studio_unlock  &trans       &trans    &trans     &trans    &trans  &trans     &trans    &trans           &trans
+&kp ESCAPE  &kp F1           &kp F2            &kp F3             &kp F4                &kp F5                                   &kp F6        &kp F7        &kp F8        &kp F9      &kp F10       &kp F11
+&kp GRAVE   &kp EXCLAMATION  &kp AT_SIGN       &kp POUND          &kp DOLLAR            &kp PERCENT                              &kp N7        &kp N8        &kp N9        &kp MINUS   &kp SLASH     &kp F12
+&trans      &kp CARET        &kp AMPS          &kp STAR           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                    &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PLUS    &kp ASTERISK  &kp DELETE
+&trans      &trans           &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LBRC              &kp RBRC               &trans    &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD  &kp EQUAL     &kp N0
+                             &trans            &trans             &trans                &trans                 &trans    &trans  &trans        &trans        &trans        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -84,11 +104,11 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans     &trans    &trans    &trans     &trans   &trans
-&trans      &kp INS       &kp PSCRN     &kp K_CMENU   &trans        &trans                          &kp PG_UP  &trans    &kp UP    &trans     &kp N0   &trans
-&trans      &kp LALT      &kp LCTRL     &kp LSHFT     &trans        &kp CLCK                        &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp DEL  &kp BSPC
-&trans      &kp K_UNDO    &kp K_CUT     &kp K_COPY    &kp K_PASTE   &trans        &trans    &trans  &trans     &trans    &trans    &trans     &trans   &trans
-                          &trans        &trans        &trans        &trans        &trans    &trans  &trans     &trans    &trans    &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                        &trans       &trans           &trans        &trans     &trans   &kp PRINTSCREEN
+&trans      &kp INS       &kp PSCRN     &kp K_PREV    &kp K_NEXT    &kp K_PLAY_PAUSE                    &kp PAGE_UP  &kp PAGE_DOWN    &kp HOME      &kp END    &kp N0   &trans
+&trans      &kp K_REDO    &kp LCTRL     &kp LSHFT     &trans        &kp CLCK                            &kp LEFT     &kp DOWN_ARROW   &kp UP_ARROW  &kp RIGHT  &kp DEL  &kp BSPC
+&trans      &kp K_UNDO    &kp K_CUT     &kp K_COPY    &kp K_PASTE   &trans            &trans    &trans  &trans       &kp LC(LS(TAB))  &kp LC(TAB)   &trans     &trans   &trans
+                          &trans        &trans        &trans        &trans            &trans    &trans  &trans       &trans           &trans        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
