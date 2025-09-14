@@ -60,7 +60,7 @@ layers:
   - {t: SPACE, h: raise}
   - RCTRL
   - {t: AltGr+TAB, h: RIGHT ALT}
-  - RGUI
+  - DELETE
   lower:
   - ESCAPE
   - F1
