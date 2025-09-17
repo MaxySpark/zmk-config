@@ -63,11 +63,11 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp GRAVE  &kp N1               &kp N2                 &kp N3            &kp N4            &kp N5                                                                 &kp N6                  &kp N7     &kp N8                      &kp N9      &kp N0    &kp MINUS
-&kp TAB    &kp Q                &kp W                  &kp E             &kp R             &kp T                                                                  &kp Y                   &kp U      &kp I                       &kp O       &kp P     &kp BACKSLASH
-&kp ESC    &HoldTap LEFT_ALT A  &HoldTap LEFT_SHIFT S  &kp D             &kp F             &kp G                                                                  &kp H                   &kp J      &kp K                       &kp L       &kp SEMI  &HoldTap RIGHT_SHIFT SQT
-&kp LSHFT  &HoldTap LCTRL Z     &kp X                  &kp C             &kp V             &kp B                    &kp C_MUTE            &none                   &kp N                   &kp M      &kp COMMA                   &kp DOT     &kp FSLH  &kp ENTER
-                                &ToggleTap 1 CAPS      &kp LEFT_CONTROL  &kp LEFT_COMMAND  &HoldTap LEFT_ALT ENTER  &HoldTap LCTRL TAB    &ToggleTap 1 BACKSPACE  &ToggleTap RAISE SPACE  &kp RCTRL  &HoldTap RIGHT_ALT RA(TAB)  &kp DELETE
+&kp GRAVE  &kp N1            &kp N2                 &kp N3            &kp N4            &kp N5                                                                 &kp N6                  &kp N7     &kp N8                      &kp N9      &kp N0    &kp MINUS
+&kp TAB    &kp Q             &kp W                  &kp E             &kp R             &kp T                                                                  &kp Y                   &kp U      &kp I                       &kp O       &kp P     &kp BACKSLASH
+&kp ESC    &kp A             &HoldTap LEFT_SHIFT S  &kp D             &kp F             &kp G                                                                  &kp H                   &kp J      &kp K                       &kp L       &kp SEMI  &HoldTap RIGHT_SHIFT SQT
+&kp LSHFT  &HoldTap LCTRL Z  &kp X                  &kp C             &kp V             &kp B                    &kp C_MUTE            &none                   &kp N                   &kp M      &kp COMMA                   &kp DOT     &kp FSLH  &kp ENTER
+                             &ToggleTap 1 CAPS      &kp LEFT_CONTROL  &kp LEFT_COMMAND  &HoldTap LEFT_ALT ENTER  &HoldTap LCTRL TAB    &ToggleTap 1 BACKSPACE  &ToggleTap RAISE SPACE  &kp RCTRL  &HoldTap RIGHT_ALT RA(TAB)  &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
