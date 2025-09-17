@@ -26,7 +26,7 @@ layers:
   - P
   - \
   - ESC
-  - {t: A, h: LEFT ALT}
+  - A
   - {t: S, h: LEFT SHIFT}
   - D
   - F
