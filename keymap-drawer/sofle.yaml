@@ -27,7 +27,7 @@ layers:
   - \
   - ESC
   - A
-  - {t: S, h: LEFT SHIFT}
+  - S
   - D
   - F
   - G
@@ -36,9 +36,9 @@ layers:
   - K
   - L
   - ;
-  - {t: '''', h: RIGHT SHIFT}
+  - ''''
   - LSHFT
-  - {t: Z, h: LCTRL}
+  - Z
   - X
   - C
   - V
@@ -50,9 +50,9 @@ layers:
   - ','
   - .
   - /
-  - ENTER
-  - {t: CAPS, h: lower}
+  - RIGHT SHIFT
   - LEFT CONTROL
+  - {t: CAPS, h: lower}
   - LEFT COMMAND
   - {t: ENTER, h: LEFT ALT}
   - {t: TAB, h: LCTRL}
@@ -112,8 +112,8 @@ layers:
   - .
   - '='
   - '0'
-  - {type: held}
   - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -234,8 +234,8 @@ layers:
   - ''
   - ''
   - ''
-  - {type: held}
   - ''
+  - {type: held}
   - ''
   - ''
   - ''
