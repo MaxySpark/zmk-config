@@ -52,10 +52,10 @@ layers:
   - /
   - RIGHT SHIFT
   - LEFT CONTROL
-  - {t: CAPS, h: lower}
-  - LEFT COMMAND
-  - {t: ENTER, h: LEFT ALT}
-  - {t: TAB, h: LCTRL}
+  - LEFT WIN
+  - LEFT ALT
+  - {t: SPACE, h: lower}
+  - {t: ENTER, h: raise}
   - {t: BACKSPACE, h: lower}
   - {t: SPACE, h: raise}
   - RCTRL
@@ -113,9 +113,9 @@ layers:
   - '='
   - '0'
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -177,9 +177,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -235,12 +235,12 @@ layers:
   - ''
   - ''
   - ''
-  - {type: held}
-  - ''
-  - ''
   - ''
   - ''
   - {type: held}
+  - {type: held}
+  - ''
+  - ''
   - ''
   - ''
   - ''
