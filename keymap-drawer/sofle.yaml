@@ -55,7 +55,7 @@ layers:
   - LEFT WIN
   - LEFT ALT
   - {t: SPACE, h: lower}
-  - {t: ENTER, h: raise}
+  - {t: ENTER, h: LCMD}
   - {t: BACKSPACE, h: lower}
   - {t: SPACE, h: raise}
   - RCTRL
@@ -177,9 +177,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -238,9 +238,9 @@ layers:
   - ''
   - ''
   - {type: held}
+  - ''
+  - ''
   - {type: held}
-  - ''
-  - ''
   - ''
   - ''
   - ''
